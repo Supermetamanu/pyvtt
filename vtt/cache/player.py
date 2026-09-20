@@ -43,7 +43,7 @@ class PlayerCache:
         self.country = self.engine.get_country_from_ip(self.ip)
         self.agent = self.engine.get_client_agent(request)
         # ? = localhost, 'unknown' = unittest
-        self.flag = flag.flag(self.country) if self.country not in ['?', 'unknown'] else ''
+        self.flag = '' #flag.flag(self.country) if self.country not in ['?', 'unknown'] else ''
 
         # add login to stats
         login_data = [time.time(), self.country, self.ip, self.agent]
